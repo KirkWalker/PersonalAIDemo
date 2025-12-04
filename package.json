@@ -1,18 +1,65 @@
 {
-  "name": "personalaidemo",
+  "name": "personalai",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "jest",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "expo": "~54.0.26",
+    "@tanstack/react-query": "^5.90.11",
+    "expo": "~54.0.25",
+    "expo-constants": "~18.0.10",
+    "expo-linking": "~8.0.9",
+    "expo-router": "~6.0.15",
     "expo-status-bar": "~3.0.8",
     "react": "19.1.0",
-    "react-native": "0.81.5"
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.16.0",
+    "react-test-renderer": "19.1.0"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.28.5",
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@eslint/js": "^9.39.1",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/react-native": "^13.3.3",
+    "@types/jest": "^29.5.14",
+    "@types/react": "~19.1.10",
+    "@typescript-eslint/eslint-plugin": "^8.48.1",
+    "@typescript-eslint/parser": "^8.48.1",
+    "babel-jest": "^29.7.0",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-native": "^5.0.0",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "jest-expo": "^54.0.13",
+    "lint-staged": "^16.2.7",
+    "metro-react-native-babel-preset": "^0.77.0",
+    "prettier": "^3.7.4",
+    "ts-jest": "^29.4.6",
+    "typescript": "~5.9.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
 }
