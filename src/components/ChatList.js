@@ -94,7 +94,7 @@ const ChatList = () => {
         <View style={styles.inputRow}>
           <TextInput
             style={styles.input}
-            placeholder="Type your message..."
+            placeholder="Type your message ..."
             value={userInput}
             onChangeText={setUserInput}
           />
