@@ -29,7 +29,7 @@ describe('ChatList Component', () => {
   it('calls setQueryData when Send is pressed', () => {
     const { getByPlaceholderText, getByText } = render(<ChatList />);
 
-    const input = getByPlaceholderText('Type your message ...');
+    const input = getByPlaceholderText('Type message');
     const sendBtn = getByText('Send');
 
     fireEvent.changeText(input, 'Test message');
