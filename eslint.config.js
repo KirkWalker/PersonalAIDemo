@@ -24,6 +24,7 @@ export default [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         jest: 'readonly',
+        require: 'readonly',
       },
     },
     plugins: { react: reactPlugin, 'react-native': rnPlugin },
