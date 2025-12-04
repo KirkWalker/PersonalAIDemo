@@ -97,7 +97,6 @@ const ChatList = () => {
             placeholder="Type your message..."
             value={userInput}
             onChangeText={setUserInput}
-            onSubmitEditing={sendMessage}
           />
           <TouchableOpacity style={styles.sendBtn} onPress={sendMessage}>
             <Text style={styles.sendBtnText}>Send</Text>
