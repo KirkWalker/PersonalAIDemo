@@ -60,7 +60,6 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "git stash push -k -u -m 'lint-staged-temp'",
       "eslint --fix",
       "prettier --write"
     ]

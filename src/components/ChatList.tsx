@@ -66,7 +66,6 @@ const ChatList = () => {
   return (
     <SafeAreaView style={styles.flex}>
       <KeyboardAvoidingView
-        style={{ flex: 1 }}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         keyboardVerticalOffset={Platform.OS === 'ios' ? 80 : 0}
       >
@@ -131,5 +130,5 @@ const styles = StyleSheet.create({
     marginLeft: 8,
     borderRadius: 6,
   },
-  sendText: { color: 'white', fontWeight: '700' },
+  sendText: { color: COLORS.white, fontWeight: '700' },
 });
