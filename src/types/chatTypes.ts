@@ -1,4 +1,3 @@
-// hooks/useChat.ts
 export interface Message {
   id: number;
   user: string;
