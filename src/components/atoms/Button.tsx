@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, TouchableOpacityProps } from 'react-native';
-import { COLORS, SPACING } from '../../styles/tokens.js';
+import { COLORS, SPACING } from '../../styles/tokens';
 
 interface ButtonProps extends TouchableOpacityProps {
   title: string;

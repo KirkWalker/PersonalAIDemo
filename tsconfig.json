@@ -2,21 +2,16 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "target": "ESNext",
-    "module": "Node16",
+    "module": "ESNext",
     "jsx": "react-native",
     "strict": true,
-    "moduleResolution": "node16",
+    "moduleResolution": "bundler", // works with React Native + Jest
     "allowJs": true,
     "noEmit": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "types": ["jest", "react", "react-native"],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    },
-    "customConditions": ["react-native"]
+    "types": ["jest", "react", "react-native"]
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]

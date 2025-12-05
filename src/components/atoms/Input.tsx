@@ -1,6 +1,6 @@
 import React from 'react';
 import { TextInput, TextInputProps, StyleSheet } from 'react-native';
-import { COLORS, SPACING } from '../../styles/tokens.js';
+import { COLORS, SPACING } from '../../styles/tokens';
 
 const Input: React.FC<TextInputProps> = (props) => {
   return (
