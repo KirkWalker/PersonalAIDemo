@@ -2,8 +2,8 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StyleSheet } from 'react-native';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import ChatList from './src/components/ChatList';
-import { COLORS } from './src/constants/colors';
+import ChatScreen from './src/components/ChatScreen';
+import { COLORS } from './src/design/tokens';
 
 const queryClient = new QueryClient();
 
@@ -11,7 +11,7 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <SafeAreaView style={styles.container}>
-        <ChatList />
+        <ChatScreen />
       </SafeAreaView>
     </QueryClientProvider>
   );
