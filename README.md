@@ -141,37 +141,6 @@ MIT License. Free to use and modify.
 
 ---
 
-Perfect — let’s sketch out a sample folder structure and component breakdown for your Expo + Chat Module project. This will give you a clear blueprint of how everything fits together.
-
-📂 Suggested Folder Structure
-personalai/
-├── babel.config.js
-├── eslint.config.cjs
-├── package.json
-├── App.tsx
-│
-├── src/
-│ ├── components/ # Reusable UI pieces
-│ │ ├── ChatMessage.tsx # Single message bubble
-│ │ ├── ChatInput.tsx # Input field for sending messages
-│ │ └── Loader.tsx # Loading spinner / indicator
-│ │
-│ ├── modules/
-│ │ └── chat/
-│ │ ├── ChatScreen.tsx # Main chat screen
-│ │ ├── ChatList.tsx # Infinite scroll list
-│ │ └── hooks/
-│ │ └── useChatMessages.ts # TanStack Query infinite scroll
-│ │
-│ ├── utils/
-│ │ └── fakeData.ts # Generates fake messages
-│ │
-│ └── styles/
-│ └── theme.ts # Colors, spacing, typography
-│
-└── tests/
-└── chat.test.tsx # Unit tests for chat components
-
 🧩 Component Breakdown
 ChatScreen.tsx
 
@@ -213,6 +182,3 @@ ChatScreen.tsx
 - Input field allows adding new fake messages.
 - Codebase enforces linting, formatting, and pre-commit checks via ESLint, Prettier, Husky, and lint-staged.
 - Modular, maintainable structure ready for real API integration later.
-
-👉 This structure ensures your app is clean, scalable, and easy to extend.
-Would you like me to also draft a sample ChatList.tsx implementation showing how to wire up useInfiniteQuery with fake data?

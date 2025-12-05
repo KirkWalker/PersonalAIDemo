@@ -1,4 +1,3 @@
-// design/tokens.ts
 export const COLORS = {
   white: '#fff',
   black: '#000',

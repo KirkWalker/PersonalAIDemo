@@ -1,18 +1,13 @@
 import React from 'react';
 import { Text as RNText, TextProps, StyleSheet } from 'react-native';
-import { TYPOGRAPHY, COLORS } from '../../styles/tokens';
+import { TYPOGRAPHY, COLORS } from '../../styles/tokens.js';
 
 interface Props extends TextProps {
   variant?: keyof typeof TYPOGRAPHY;
   color?: keyof typeof COLORS;
 }
 
-const Text: React.FC<Props> = ({
-  variant = 'body',
-  color = 'black',
-  style,
-  ...props
-}) => {
+const Text: React.FC<Props> = ({ variant = 'body', color = 'black', style, ...props }) => {
   return (
     <RNText
       style={[TYPOGRAPHY[variant], { color: COLORS[color] }, style]}
