@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Text from '../atoms/Text';
-import { COLORS, SPACING } from '../design/tokens';
-import { Message } from '../data/fakeChatData';
+import { COLORS, SPACING } from '../../styles/tokens';
+import { Message } from '../../data/fakeChatData';
 
 interface ChatItemProps extends Message {}
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text as RNText, TextProps, StyleSheet } from 'react-native';
-import { TYPOGRAPHY, COLORS } from '../design/tokens';
+import { TYPOGRAPHY, COLORS } from '../../styles/tokens';
 
 interface Props extends TextProps {
   variant?: keyof typeof TYPOGRAPHY;

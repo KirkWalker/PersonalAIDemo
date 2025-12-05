@@ -6,16 +6,16 @@ import {
   InteractionManager,
   StyleSheet,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+
 import { useQueryClient } from '@tanstack/react-query';
 
-import { useChat } from '../hooks/useChat';
-import { Message } from '../data/fakeChatData';
-
-import Header from './Header';
-import MessageList from './MessageList';
-import ChatInput from './ChatInput';
-import LoadingIndicator from './LoadingIndicator';
+import { useChat } from '../../hooks/useChat';
+import { Message } from '../../data/fakeChatData';
+import Layout from '../layout/Layout';
+import Header from '../layout/Header';
+import MessageList from '../chat/MessageList';
+import ChatInput from '../chat/ChatInput';
+import LoadingIndicator from '../atoms/LoadingIndicator';
 
 const ChatScreen = () => {
   const queryClient = useQueryClient();
@@ -61,7 +61,7 @@ const ChatScreen = () => {
   };
 
   return (
-    <SafeAreaView style={styles.flex}>
+    <Layout>
       <KeyboardAvoidingView
         style={styles.flex}
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
@@ -86,7 +86,7 @@ const ChatScreen = () => {
           onSend={sendMessage}
         />
       </KeyboardAvoidingView>
-    </SafeAreaView>
+    </Layout>
   );
 };
 

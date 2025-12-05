@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Keyboard } from 'react-native';
 import Input from '../atoms/Input';
 import Button from '../atoms/Button';
-import { COLORS, SPACING } from '../design/tokens';
+import { COLORS, SPACING } from '../../styles/tokens';
 
 interface ChatInputProps {
   value: string;
