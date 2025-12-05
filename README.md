@@ -27,18 +27,38 @@ A modular React Native chat application with system‑driven responses, quick‑
 
     src/
       components/
-        MessageItem.tsx
+        atoms/
+            Button.tsx
+            Input.tsx
+            LoadingIndicator.tsx
+            Text.tsx
+        chat/
+            ChatInput.tsx
+            ChatItem.tsx
+            MessageList.tsx
+        layout/
+            Header.jsx
+            Layout.jsx
+        screens/
+            ChatScreen.jsx
       hooks/
         useChatConversation.ts
       data/
-        systemOptions.ts
-        systemResponses.ts
-    ChatScreen.tsx
+        fakeChatData.ts
+      styles/
+        tokens.ts
+      types/
+        chatTypes.ts
     .husky/
       pre-commit
       pre-push
       commit-msg
     commitlint.config.js
+    eslint.config.js
+    .prettierrc
+    tsconfig.json
+    jest.config.js
+    jestSetup.js
 
 ---
 
