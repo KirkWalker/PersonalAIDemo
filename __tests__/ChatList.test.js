@@ -1,6 +1,5 @@
-import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import ChatList from '../src/components/ChatList';
+import MessageList from '../src/components/ChatScreen';
 
 // Mock react-query fully inside the factory
 jest.mock('@tanstack/react-query', () => {
@@ -27,9 +26,9 @@ jest.mock('../src/hooks/useChat', () => ({
 
 describe('ChatList Component', () => {
   it('calls setQueryData when Send is pressed', () => {
-    const { getByPlaceholderText, getByText } = render(<ChatList />);
+    const { getByPlaceholderText, getByText } = render(<MessageList />);
 
-    const input = getByPlaceholderText('Type message');
+    const input = getByPlaceholderText('Type your message...');
     const sendBtn = getByText('Send');
 
     fireEvent.changeText(input, 'Test message');
