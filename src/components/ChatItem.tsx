@@ -8,12 +8,15 @@ interface ChatItemProps extends Message {}
 
 const ChatItem: React.FC<ChatItemProps> = ({ user, message }) => {
   const isUser = user === 'You';
+  const displayName = isUser ? 'You' : 'Bot'; // Explicitly show names
   return (
-    <View style={[styles.row, isUser ? styles.right : styles.left]}>
+    <View
+      style={[styles.row, isUser ? styles.right : styles.left]}
+      accessibilityRole="text"
+      accessibilityLabel={`${user} says: ${message}`}
+    >
       <View style={[styles.card, isUser ? styles.userCard : styles.systemCard]}>
-        <Text variant="body" color={isUser ? 'green' : 'drkgrey'}>
-          {user}
-        </Text>
+        <Text variant="body">{user}</Text>
         <Text variant="body">{message}</Text>
       </View>
     </View>

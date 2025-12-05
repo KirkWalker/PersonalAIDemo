@@ -17,6 +17,8 @@ const Text: React.FC<Props> = ({
     <RNText
       style={[TYPOGRAPHY[variant], { color: COLORS[color] }, style]}
       {...props}
+      accessibilityLabel="Message input field"
+      accessibilityHint="Type your message here and press send to submit"
     />
   );
 };

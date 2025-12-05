@@ -3,7 +3,14 @@ import { TextInput, TextInputProps, StyleSheet } from 'react-native';
 import { COLORS, SPACING } from '../design/tokens';
 
 const Input: React.FC<TextInputProps> = (props) => {
-  return <TextInput style={styles.input} {...props} />;
+  return (
+    <TextInput
+      style={styles.input}
+      {...props}
+      accessibilityLabel="Message input field"
+      accessibilityHint="Type your message here and press send to submit"
+    />
+  );
 };
 
 const styles = StyleSheet.create({

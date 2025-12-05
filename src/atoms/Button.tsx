@@ -24,6 +24,8 @@ const Button: React.FC<ButtonProps> = ({
     <TouchableOpacity
       style={[styles.button, { backgroundColor: bgColor }, style]}
       {...props}
+      accessibilityLabel="Send message"
+      accessibilityRole="button"
     >
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>

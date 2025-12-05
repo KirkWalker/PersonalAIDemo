@@ -28,6 +28,8 @@ const MessageList: React.FC<MessageListProps> = ({
       onEndReachedThreshold={0.5}
       ListFooterComponent={isFetchingNextPage ? <Text>Loading...</Text> : null}
       contentContainerStyle={styles.pad}
+      accessibilityLabel="Chat messages"
+      accessibilityHint="Scroll through messages"
     />
   );
 };
