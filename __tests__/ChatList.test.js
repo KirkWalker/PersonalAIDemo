@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react-native';
-import MessageList from '../src/components/ChatScreen';
+import MessageList from '../src/components/screens/ChatScreen';
 
 // Mock react-query fully inside the factory
 jest.mock('@tanstack/react-query', () => {

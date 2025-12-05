@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react-native';
-import ChatItem from '../src/components/ChatItem';
+import ChatItem from '../src/components/chat/ChatItem';
 
 describe('ChatItem component', () => {
   it('renders user and message correctly', () => {
