@@ -2,7 +2,8 @@
 import React from 'react';
 import { FlatList, Text, StyleSheet, FlatListProps } from 'react-native';
 import ChatItem from './ChatItem';
-import { Message } from '../data/fakeChatData';
+import { Message } from '../../data/fakeChatData';
+import LoadingIndicator from '../atoms/LoadingIndicator';
 
 interface MessageListProps {
   messages: Message[];
@@ -26,7 +27,7 @@ const MessageList: React.FC<MessageListProps> = ({
       keyExtractor={(m) => m.id.toString()}
       onEndReached={() => hasNextPage && fetchNextPage()}
       onEndReachedThreshold={0.5}
-      ListFooterComponent={isFetchingNextPage ? <Text>Loading...</Text> : null}
+      ListFooterComponent={isFetchingNextPage ? <LoadingIndicator /> : null}
       contentContainerStyle={styles.pad}
       accessibilityLabel="Chat messages"
       accessibilityHint="Scroll through messages"
