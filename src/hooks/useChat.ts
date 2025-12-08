@@ -5,16 +5,9 @@ import { Message } from '../types/chatTypes';
 export type MessagePage = Message[];
 
 export const useChat = () =>
-  useInfiniteQuery<
-    MessagePage,
-    Error,
-    InfiniteData<MessagePage>,
-    ['chatMessages'],
-    number
-  >({
+  useInfiniteQuery<MessagePage, Error, InfiniteData<MessagePage>, ['chatMessages'], number>({
     queryKey: ['chatMessages'],
-    queryFn: ({ pageParam = 0 }) =>
-      Promise.resolve(generateFakeMessages(pageParam)),
+    queryFn: async ({ pageParam = 0 }) => Promise.resolve(await generateFakeMessages(pageParam)),
     getNextPageParam: (_lastPage, allPages) => allPages.length,
     initialPageParam: 0,
   });
